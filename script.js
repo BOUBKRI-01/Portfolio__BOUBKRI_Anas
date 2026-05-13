@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Navbar Sticky effect
+    
+    // 1. Gestion de la Navbar au défilement
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
@@ -9,25 +10,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2. Scroll Reveal Animations
-    const reveals = document.querySelectorAll(".reveal");
+    // 2. Menu mobile Hamburger
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinksList = document.querySelector(".nav-links");
 
-    const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        const elementVisible = 100; // Distance avant l'apparition
+    menuToggle.addEventListener("click", () => {
+        navLinksList.classList.toggle("show");
+        const icon = menuToggle.querySelector("i");
+        if(navLinksList.classList.contains("show")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+        }
+    });
 
-        reveals.forEach((reveal) => {
-            const elementTop = reveal.getBoundingClientRect().top;
-            if (elementTop < windowHeight - elementVisible) {
-                reveal.classList.add("active");
-            }
+    // Fermer le menu si on clique sur un lien (sur mobile)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinksList.classList.remove("show");
+            menuToggle.querySelector("i").classList.remove("fa-times");
+            menuToggle.querySelector("i").classList.add("fa-bars");
         });
-    };
+    });
 
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Lancer au chargement initial
-
-    // 3. Highlight des liens du menu actif
+    // 3. Highlight du menu actif (Scroll Spy)
     const sections = document.querySelectorAll("section, header");
     const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -36,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
+            // Ajustement pour déclencher le changement un peu avant le milieu de l'écran
             if (window.scrollY >= sectionTop - sectionHeight / 3) {
                 current = section.getAttribute("id");
             }
@@ -48,4 +57,25 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // 4. API Intersection Observer pour des animations fluides au scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.15 // Déclenche l'animation quand 15% de l'élément est visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                // Optionnel : arrêter d'observer une fois l'élément affiché
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    // Sélectionner tous les éléments à animer
+    const revealElements = document.querySelectorAll(".reveal-up, .reveal-left, .reveal-right");
+    revealElements.forEach(el => observer.observe(el));
 });
