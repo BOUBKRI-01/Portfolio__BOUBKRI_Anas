@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anas BOUBKRI | Ingénieur Automobile & Électronique Embarquée</title>
+  <meta name="description" content="Ingénieur Automobile & Électronique Embarquée — ENSA Berrechid. Systèmes embarqués, AUTOSAR, MATLAB/Simulink." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">anas_boubkri</div>
+    <ul class="nav-links">
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#education">Formation</a></li>
+      <li><a href="#experience">Expérience</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="bg-circuit"></div>
+      <div class="bg-grid"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-pre reveal">Bonjour — Je suis</p>
+        <h1 class="hero-name reveal">Anas<br /><span>BOUBKRI</span></h1>
+        <p class="hero-role reveal">Ingénieur Automobile &amp;<br />Électronique Embarquée</p>
+        <p class="hero-sub reveal">Étudiant ingénieur à l'ENSA Berrechid · Automobile &amp; Solutions Digitales.<br />Passionné par les systèmes embarqués et les environnements industriels.</p>
+
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">Voir les Projets</a>
+          <a href="CV_PFA_-_BOUBKRI_Anas.pdf" download class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Télécharger CV
+          </a>
+          <a href="mailto:boubkrianas7@gmail.com" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            Me Contacter
+          </a>
+        </div>
+
+        <div class="hero-social reveal">
+          <a href="https://www.linkedin.com/in/anas-boubkri" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:boubkrianas7@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROFILE IMAGE WITH ANIMATIONS -->
+      <div class="hero-image reveal">
+        <div class="profile-wrapper">
+          <!-- Rotating rings -->
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <!-- Orbiting dots -->
+          <div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+          <div class="orbit orbit-2"><div class="orbit-dot orbit-dot-2"></div></div>
+          <div class="orbit orbit-3"><div class="orbit-dot orbit-dot-3"></div></div>
+          <!-- Pulse effect -->
+          <div class="pulse-ring pulse-1"></div>
+          <div class="pulse-ring pulse-2"></div>
+          <!-- Photo -->
+          <div class="profile-photo">
+            <img src="photo.jpg" alt="Anas BOUBKRI" id="profileImg" />
+            <div class="photo-fallback" id="photoFallback">AB</div>
+          </div>
+          <!-- Badge -->
+          <div class="profile-badge">
+            <span class="badge-dot"></span>
+            Disponible pour stage PFA
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Formation</span>
+        <h2 class="section-title">Parcours Académique</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-icon">🎓</div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3>École Nationale des Sciences Appliquées — ENSA Berrechid</h3>
+                <p class="card-sub">Cycle d'Ingénieur · Automobile et Solutions Digitales</p>
+              </div>
+              <span class="card-date">2024 – 2027</span>
+            </div>
+            <p>Formation d'ingénieur spécialisée en systèmes embarqués automobiles, architecture AUTOSAR, et solutions digitales industrielles.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-icon">📘</div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3>École Supérieure de Technologies — EST Kénitra</h3>
+                <p class="card-sub">Licence Professionnelle · Électrotechnique, Instrumentation &amp; Supervision des Systèmes Intelligents</p>
+              </div>
+              <span class="card-date">2023 – 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-icon">⚡</div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3>École Supérieure de Technologies — EST Kénitra</h3>
+                <p class="card-sub">DUT · Électronique Embarquée pour l'Automobile</p>
+              </div>
+              <span class="card-date">2021 – 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-icon">🏫</div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div>
+                <h3>Lycée ABDELLAH ALAROUI — Mohammedia</h3>
+                <p class="card-sub">Baccalauréat · Sciences Physiques</p>
+              </div>
+              <span class="card-date">2020 – 2021</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Expérience</span>
+        <h2 class="section-title">Stages &amp; Missions</h2>
+        <p class="section-desc">Automatisation industrielle, systèmes embarqués et conception mécanique.</p>
+      </div>
+      <div class="exp-grid">
+
+        <div class="exp-card reveal">
+          <div class="exp-card-top">
+            <div class="exp-logo">N</div>
+            <div class="exp-info">
+              <h3>NOVARES Kénitra</h3>
+              <p class="exp-role">Stagiaire Manufacturing Engineering</p>
+              <span class="exp-date">Juillet 2025 – Août 2025</span>
+            </div>
+            <span class="exp-tag">Industriel</span>
+          </div>
+          <ul class="exp-list">
+            <li>Optimisation du Layout d'usine : conception 2D, propositions d'améliorations et implémentation sur le terrain</li>
+            <li>Élaboration des fiches d'instructions pour des postes de travail dans le cadre d'amélioration continue</li>
+            <li>Conception 3D d'une machine de découpe d'enjoliveurs sur CATIA V5</li>
+          </ul>
+          <div class="exp-tech">
+            <span>CATIA V5</span><span>Lean Manufacturing</span><span>AutoCAD</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-top">
+            <div class="exp-logo" style="background: var(--accent-2)">E</div>
+            <div class="exp-info">
+              <h3>Laboratoire d'Automatique &amp; Instrumentation — EST Kénitra</h3>
+              <p class="exp-role">Stagiaire PFE</p>
+              <span class="exp-date">Avril 2024 – Juin 2024</span>
+            </div>
+            <span class="exp-tag">Automatisation</span>
+          </div>
+          <ul class="exp-list">
+            <li>Conception et réalisation d'un système SCADA pour la gestion d'énergie électrique fournie par des centrales de mesures</li>
+          </ul>
+          <div class="exp-tech">
+            <span>SCADA</span><span>TIA PORTAL</span><span>IHM</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-top">
+            <div class="exp-logo" style="background: #e05c3a">O</div>
+            <div class="exp-info">
+              <h3>Technicentre de Maintenance — ONCF Kénitra</h3>
+              <p class="exp-role">Stagiaire Systèmes Embarqués</p>
+              <span class="exp-date">Avril 2023 – Mai 2023</span>
+            </div>
+            <span class="exp-tag">Embarqué</span>
+          </div>
+          <ul class="exp-list">
+            <li>Conception et réalisation d'un système embarqué pour le verrouillage automatique de porte du magasin d'outillages</li>
+          </ul>
+          <div class="exp-tech">
+            <span>STM32</span><span>C Embarqué</span><span>Proteus</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-top">
+            <div class="exp-logo" style="background: #5a8f3c">U</div>
+            <div class="exp-info">
+              <h3>UNIVERS EMBALLAGES — Kénitra</h3>
+              <p class="exp-role">Stagiaire Maintenance</p>
+              <span class="exp-date">Juin 2022 – Juillet 2022</span>
+            </div>
+            <span class="exp-tag">Maintenance</span>
+          </div>
+          <ul class="exp-list">
+            <li>Maintenance préventive et corrective des moteurs électriques dédiés au bobinage des fils</li>
+          </ul>
+          <div class="exp-tech">
+            <span>Moteurs Électriques</span><span>Maintenance</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projets</span>
+        <h2 class="section-title">Projets Académiques</h2>
+        <p class="section-desc">Systèmes embarqués, automatisation et intelligence artificielle appliquée à l'automobile.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal featured">
+          <div class="project-icon">🚗</div>
+          <div class="project-content">
+            <span class="project-category">Perception · IA</span>
+            <h3>Système de Détection Multi-Classe d'Obstacles</h3>
+            <p>Développement d'un système automobile de détection d'obstacles en temps réel avec classification multi-classe intégrée dans un pipeline embarqué.</p>
+          </div>
+          <div class="project-tech">
+            <span>Python</span><span>Raspberry Pi</span><span>Vision par Ordinateur</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">🤖</div>
+          <div class="project-content">
+            <span class="project-category">IA · Embarqué</span>
+            <h3>Chatbot IA pour l'Assistance Conducteur</h3>
+            <p>Développement d'un assistant intelligent embarqué pour l'aide à la conduite via traitement du langage naturel.</p>
+          </div>
+          <div class="project-tech">
+            <span>Python</span><span>NLP</span><span>ESP32</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">🔋</div>
+          <div class="project-content">
+            <span class="project-category">Hardware · Automobile</span>
+            <h3>BMS — Battery Management System</h3>
+            <p>Conception et réalisation d'un système de gestion de batterie pour véhicule électrique avec surveillance des cellules.</p>
+          </div>
+          <div class="project-tech">
+            <span>STM32</span><span>C</span><span>EasyEDA</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">⚙️</div>
+          <div class="project-content">
+            <span class="project-category">Simulation · Contrôle</span>
+            <h3>Commande Avancée Moteur PMSM de Traction</h3>
+            <p>Modélisation et commande vectorielle d'un moteur PMSM de traction électrique sous MATLAB/Simulink.</p>
+          </div>
+          <div class="project-tech">
+            <span>MATLAB</span><span>Simulink</span><span>Contrôle vectoriel</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">🔩</div>
+          <div class="project-content">
+            <span class="project-category">CAO · Mécanique</span>
+            <h3>Moteur à 4 Cylindres — CATIA V5</h3>
+            <p>Conception 3D complète d'un moteur à quatre cylindres avec assemblage et mise en plan sur CATIA V5.</p>
+          </div>
+          <div class="project-tech">
+            <span>CATIA V5</span><span>SolidWorks</span><span>CAO 3D</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">🛣️</div>
+          <div class="project-content">
+            <span class="project-category">ADAS · Contrôle</span>
+            <h3>Régulateur de Vitesse Adaptatif — ACC</h3>
+            <p>Réalisation d'un système de contrôle de vitesse adaptatif (Adaptive Cruise Control) avec modélisation du comportement véhicule.</p>
+          </div>
+          <div class="project-tech">
+            <span>MATLAB</span><span>Simulink</span><span>AUTOSAR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Compétences</span>
+        <h2 class="section-title">Expertise Technique</h2>
+        <p class="section-desc">Organisé par domaine — cliquez pour développer.</p>
+      </div>
+
+      <div class="skills-accordion">
+
+        <div class="skill-group reveal">
+          <button class="skill-group-header" onclick="toggleSkill(this)">
+            <span class="skill-group-label">
+              <span class="skill-group-icon">🏗️</span>
+              Ingénierie des Systèmes
+            </span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="skill-group-body open">
+            <div class="skill-tags">
+              <span>Architecture AUTOSAR</span><span>Modélisation SysML</span><span>UML</span><span>MATLAB</span><span>Simulink</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <button class="skill-group-header" onclick="toggleSkill(this)">
+            <span class="skill-group-label">
+              <span class="skill-group-icon">💡</span>
+              Systèmes Embarqués
+            </span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="skill-group-body">
+            <div class="skill-tags">
+              <span>ESP32</span><span>STM32</span><span>Raspberry Pi</span><span>FPGA</span><span>Langage C</span><span>Python</span><span>VHDL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <button class="skill-group-header" onclick="toggleSkill(this)">
+            <span class="skill-group-label">
+              <span class="skill-group-icon">🤖</span>
+              Automatisation
+            </span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="skill-group-body">
+            <div class="skill-tags">
+              <span>TIA PORTAL</span><span>Grafcet</span><span>Ladder</span><span>IHM</span><span>SCADA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <button class="skill-group-header" onclick="toggleSkill(this)">
+            <span class="skill-group-label">
+              <span class="skill-group-icon">✏️</span>
+              Conception &amp; CAO
+            </span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="skill-group-body">
+            <div class="skill-tags">
+              <span>Proteus</span><span>EasyEDA</span><span>AutoCAD</span><span>DraftSight</span><span>CATIA V5</span><span>SolidWorks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <button class="skill-group-header" onclick="toggleSkill(this)">
+            <span class="skill-group-label">
+              <span class="skill-group-icon">📊</span>
+              Data Analysis &amp; Big Data
+            </span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="skill-group-body">
+            <div class="skill-tags">
+              <span>Minitab</span><span>Excel</span><span>Power BI</span><span>Spark (Scala)</span><span>Hadoop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <button class="skill-group-header" onclick="toggleSkill(this)">
+            <span class="skill-group-label">
+              <span class="skill-group-icon">✅</span>
+              Qualité &amp; Lean
+            </span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="skill-group-body">
+            <div class="skill-tags">
+              <span>ISO 9001</span><span>Lean Manufacturing</span><span>Gestion de Projet</span><span>Lean Six Sigma</span><span>PMI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LANGUAGES & CERTS -->
+      <div class="extras-row">
+        <div class="extra-card reveal">
+          <h3>🌐 Langues</h3>
+          <div class="lang-list">
+            <div class="lang-item">
+              <span class="lang-name">Arabe</span>
+              <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+              <span class="lang-level">Natif</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">Français</span>
+              <div class="lang-bar"><div class="lang-fill" style="width:72%"></div></div>
+              <span class="lang-level">B2</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">Anglais</span>
+              <div class="lang-bar"><div class="lang-fill" style="width:52%"></div></div>
+              <span class="lang-level">B1</span>
+            </div>
+          </div>
+        </div>
+        <div class="extra-card reveal">
+          <h3>🏅 Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item">
+              <span class="cert-icon">⭐</span>
+              <div>
+                <p class="cert-name">Lean Six Sigma</p>
+                <p class="cert-org">Certification Qualité</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">📋</span>
+              <div>
+                <p class="cert-name">PMI — Project Management</p>
+                <p class="cert-org">Project Management Institute</p>
+              </div>
+            </div>
+            <div class="cert-item">
+              <span class="cert-icon">🎓</span>
+              <div>
+                <p class="cert-name">Formateur Technique</p>
+                <p class="cert-org">Udemy &amp; YouTube</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-left reveal">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Parlons-en</h2>
+          <p class="contact-desc">Disponible pour un stage PFA — Maroc &amp; international, présentiel ou hybride.<br />N'hésitez pas à me contacter directement.</p>
+
+          <div class="contact-links">
+            <a href="mailto:boubkrianas7@gmail.com" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+              </div>
+              <div>
+                <p class="contact-link-label">Email</p>
+                <p class="contact-link-value">boubkrianas7@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/anas-boubkri" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <p class="contact-link-label">LinkedIn</p>
+                <p class="contact-link-value">@Anas BOUBKRI</p>
+              </div>
+            </a>
+
+            <a href="tel:0638647298" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="contact-link-label">Téléphone</p>
+                <p class="contact-link-value">06.38.64.72.98</p>
+              </div>
+            </a>
+          </div>
+
+          <a href="CV_PFA_-_BOUBKRI_Anas.pdf" download class="btn btn-primary download-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Télécharger mon CV
+          </a>
+        </div>
+
+        <div class="contact-right reveal">
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <div class="status-dot"></div>
+              <span>Disponible pour stage PFA 2025–2026</span>
+            </div>
+            <div class="contact-card-body">
+              <div class="info-row">
+                <span>📍</span>
+                <span>Maroc — Kénitra / Berrechid</span>
+              </div>
+              <div class="info-row">
+                <span>🎓</span>
+                <span>ENSA Berrechid — 2ème année Ingénieur</span>
+              </div>
+              <div class="info-row">
+                <span>🚀</span>
+                <span>Présentiel, Hybride ou Remote</span>
+              </div>
+              <div class="info-row">
+                <span>🏭</span>
+                <span>Automobile · Industrie · R&amp;D</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">anas_boubkri</p>
+      <p class="footer-copy">© 2025 Anas BOUBKRI — Tous droits réservés</p>
+      <div class="footer-links">
+        <a href="#experience">Expérience</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
