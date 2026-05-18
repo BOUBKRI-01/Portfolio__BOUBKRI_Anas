@@ -146,7 +146,6 @@ section {
 
 .hero-buttons { display: flex; gap: 20px; }
 
-/* Boutons */
 .btn {
     padding: 14px 28px;
     border-radius: 30px;
@@ -223,10 +222,8 @@ section {
     z-index: 3;
     border: 3px solid rgba(0, 210, 255, 0.3);
 }
-
 @keyframes rotate { 100% { transform: rotate(360deg); } }
 
-/* A Propos */
 .about-container p {
     text-align: center;
     max-width: 800px;
@@ -235,7 +232,7 @@ section {
     color: var(--text-muted);
 }
 
-/* Formations Grid */
+/* Formations & Logos */
 .formations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -267,15 +264,26 @@ section {
     border-color: rgba(0, 210, 255, 0.2);
 }
 .formation-card:hover::before { transform: scaleX(1); }
-.formation-icon {
-    width: 60px; height: 60px;
-    background: rgba(0, 210, 255, 0.1);
-    color: var(--primary);
+
+/* Nouveau style pour les logos des écoles */
+.formation-logo {
+    width: 80px; 
+    height: 80px;
+    background: #ffffff; /* Fond blanc pour la clarté du logo */
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     margin: 0 auto 20px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+.formation-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 .formation-date { color: var(--primary); font-weight: 700; display: block; margin-bottom: 10px; }
 .formation-card h3 { margin-bottom: 5px; font-size: 1.2rem; }
 .formation-card h4 { color: var(--text-muted); font-weight: 400; margin-bottom: 15px; font-size: 1rem; }
@@ -310,7 +318,7 @@ section {
 .skill-card h3 { margin-bottom: 15px; font-size: 1.3rem; }
 .skill-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-/* Expérience Timeline */
+/* Expérience Timeline & Logos */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -360,6 +368,30 @@ section {
     border-color: rgba(0, 210, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
+/* En-tête Timeline pour logo */
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.timeline-item:nth-child(odd) .timeline-header {
+    flex-direction: row-reverse; /* Aligner logo à gauche pour les blocs impairs */
+}
+.company-logo {
+    width: 65px;
+    height: 65px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.timeline-item:nth-child(odd) .company-logo { margin-right: 15px; }
+.timeline-item:nth-child(even) .company-logo { margin-left: 15px; }
+
 .timeline-date {
     display: inline-block;
     padding: 5px 15px;
@@ -371,7 +403,7 @@ section {
     margin-bottom: 15px;
 }
 .timeline-content h3 { font-size: 1.3rem; margin-bottom: 5px; }
-.timeline-content h4 { color: var(--text-muted); margin-bottom: 15px; font-weight: 400; }
+.timeline-content h4 { color: var(--text-muted); font-weight: 400; margin-bottom: 15px;}
 .timeline-content ul {
     list-style-position: inside;
     color: #9ca3af;
@@ -379,7 +411,7 @@ section {
     text-align: left;
 }
 
-/* Projets */
+/* Projets Refonte (Images + Cartes Séparées) */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -388,18 +420,37 @@ section {
 .project-card {
     background: var(--bg-card);
     border-radius: 16px;
-    padding: 35px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition-slow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary);
     box-shadow: 0 15px 30px rgba(0, 210, 255, 0.1);
 }
-.project-card h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.4rem; }
-.project-card ul { color: var(--text-muted); margin-left: 20px; }
-.project-card li { margin-bottom: 10px; }
+.project-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+.project-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+.project-content h3 { color: var(--text-light); margin-bottom: 10px; font-size: 1.3rem; }
+.project-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
 
 /* Contact */
 .contact-container { text-align: center; }
@@ -431,7 +482,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Animations JS classes */
+/* Animations JS */
 .reveal-up, .reveal-left, .reveal-right {
     opacity: 0;
     visibility: hidden;
@@ -440,11 +491,8 @@ footer {
 .reveal-up { transform: translateY(60px); }
 .reveal-left { transform: translateX(-60px); }
 .reveal-right { transform: translateX(60px); }
-
 .reveal-up.active, .reveal-left.active, .reveal-right.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0);
+    opacity: 1; visibility: visible; transform: translate(0);
 }
 
 /* Responsive Design */
@@ -453,9 +501,12 @@ footer {
     .hero-buttons { justify-content: center; }
     .timeline::after { left: 40px; }
     .timeline-item { width: 100%; padding-left: 90px; padding-right: 20px; text-align: left; }
-    .timeline-item:nth-child(even) { left: 0; }
+    .timeline-item:nth-child(even), .timeline-item:nth-child(odd) { left: 0; }
     .timeline-item::after { left: 30px; }
     .timeline-item:nth-child(even):after { left: 30px; }
+    /* Ajustement des logos sur mobile */
+    .timeline-item:nth-child(odd) .timeline-header { flex-direction: row; }
+    .timeline-item:nth-child(odd) .company-logo { margin-right: 0; margin-left: 15px; }
 }
 
 @media (max-width: 768px) {
@@ -469,7 +520,6 @@ footer {
     .nav-links.show { display: flex; }
     .nav-links li { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
     .menu-toggle { display: block; }
-    
     .hero-content h1 { font-size: 2.5rem; }
     .profile-container, .profile-img { width: 300px; height: 300px; }
     section { padding: 80px 5%; }
