@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            // Ajustement pour déclencher le changement un peu avant le milieu de l'écran
             if (window.scrollY >= sectionTop - sectionHeight / 3) {
                 current = section.getAttribute("id");
             }
@@ -62,20 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const observerOptions = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.15 // Déclenche l'animation quand 15% de l'élément est visible
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("active");
-                // Optionnel : arrêter d'observer une fois l'élément affiché
-                // observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
 
-    // Sélectionner tous les éléments à animer
     const revealElements = document.querySelectorAll(".reveal-up, .reveal-left, .reveal-right");
     revealElements.forEach(el => observer.observe(el));
 });
