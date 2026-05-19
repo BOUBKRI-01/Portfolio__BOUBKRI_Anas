@@ -232,7 +232,7 @@ section {
     color: var(--text-muted);
 }
 
-/* Formations & Logos */
+/* Formations */
 .formations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -264,26 +264,6 @@ section {
     border-color: rgba(0, 210, 255, 0.2);
 }
 .formation-card:hover::before { transform: scaleX(1); }
-
-/* Nouveau style pour les logos des écoles */
-.formation-logo {
-    width: 80px; 
-    height: 80px;
-    background: #ffffff; /* Fond blanc pour la clarté du logo */
-    border-radius: 50%;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    margin: 0 auto 20px;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-.formation-logo img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
 .formation-date { color: var(--primary); font-weight: 700; display: block; margin-bottom: 10px; }
 .formation-card h3 { margin-bottom: 5px; font-size: 1.2rem; }
 .formation-card h4 { color: var(--text-muted); font-weight: 400; margin-bottom: 15px; font-size: 1rem; }
@@ -318,7 +298,7 @@ section {
 .skill-card h3 { margin-bottom: 15px; font-size: 1.3rem; }
 .skill-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-/* Expérience Timeline & Logos */
+/* Expérience Timeline */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -369,50 +349,66 @@ section {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* En-tête Timeline pour logo */
+/* En-tête Timeline (Logos et Titres) */
 .timeline-header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centre le logo verticalement par rapport au texte */
+    align-items: center; /* Centre verticalement */
     margin-bottom: 25px;
-    gap: 25px; /* Espacement fixe et propre entre le texte et le logo */
+    gap: 25px; /* Espace net entre le logo et le texte */
 }
-
-/* S'assure que le bloc de texte prend bien l'espace restant */
 .timeline-header > div {
-    flex: 1; 
+    flex: 1; /* Le texte prend l'espace disponible */
 }
-
 .timeline-item:nth-child(odd) .timeline-header {
-    flex-direction: row-reverse; /* Aligne le logo à gauche pour les blocs impairs */
-    text-align: right; /* Aligne le texte correctement à droite */
+    flex-direction: row-reverse; /* Logo à gauche pour les blocs de gauche */
+    text-align: right;
 }
-
 .timeline-item:nth-child(even) .timeline-header {
     text-align: left;
 }
 
-.company-logo {
-    width: 95px;  /* Logo beaucoup plus grand */
-    height: 95px;
-    background: #ffffff; /* Fond blanc maintenu pour la lisibilité des logos non transparents */
-    border-radius: 20px; /* Carré très arrondi, design tech moderne */
-    padding: 10px; /* Moins de marge interne pour que le logo soit plus visible */
-    object-fit: contain; /* Garde les proportions exactes et centre le logo */
+/* --- DESIGN UNIFIÉ DES LOGOS (Entreprises & Écoles) --- */
+.company-logo, .formation-logo {
+    width: 90px;
+    height: 90px;
+    background: rgba(10, 15, 28, 0.6); /* Fond sombre transparent */
+    border-radius: 20px;
+    padding: 12px;
     flex-shrink: 0;
-    margin: 0 !important; /* Supprime les anciennes marges */
-    /* Ombre noire pour la profondeur + fine bordure lumineuse cyan */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 210, 255, 0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation fluide avec effet rebond */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 210, 255, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Effet très attractif au survol de la carte */
-.timeline-item:hover .company-logo {
-    transform: scale(1.1) rotate(5deg); /* Léger zoom et rotation */
-    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.2), 0 0 0 3px var(--primary); /* Bordure cyan qui s'illumine */
+/* Spécificité Image Entreprise */
+.company-logo {
+    object-fit: contain;
+    object-position: center;
+    margin: 0 !important;
 }
 
-/* Ajustement de la date pour ce nouveau design */
+/* Spécificité Conteneur École */
+.formation-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px !important; /* Maintient le logo centré dans la carte de formation */
+}
+.formation-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Animations Logos au survol */
+.timeline-item:hover .company-logo, .formation-card:hover .formation-logo {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(10, 15, 28, 0.9);
+    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.2), 0 0 0 2px var(--primary);
+}
+/* -------------------------------------------------------- */
+
 .timeline-date {
     display: inline-block;
     padding: 6px 16px;
@@ -424,8 +420,16 @@ section {
     margin-bottom: 15px;
     border: 1px solid rgba(0, 210, 255, 0.2);
 }
+.timeline-content h3 { font-size: 1.3rem; margin-bottom: 5px; }
+.timeline-content h4 { color: var(--text-muted); font-weight: 400; margin-bottom: 15px;}
+.timeline-content ul {
+    list-style-position: inside;
+    color: #9ca3af;
+    font-size: 0.95rem;
+    text-align: left;
+}
 
-/* Projets Refonte (Images + Cartes Séparées) */
+/* Projets */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -518,9 +522,12 @@ footer {
     .timeline-item:nth-child(even), .timeline-item:nth-child(odd) { left: 0; }
     .timeline-item::after { left: 30px; }
     .timeline-item:nth-child(even):after { left: 30px; }
-    /* Ajustement des logos sur mobile */
-    .timeline-item:nth-child(odd) .timeline-header { flex-direction: row; }
-    .timeline-item:nth-child(odd) .company-logo { margin-right: 0; margin-left: 15px; }
+    
+    /* Réalignement du logo à gauche sur mobile pour toutes les cartes */
+    .timeline-item:nth-child(odd) .timeline-header { 
+        flex-direction: row; 
+        text-align: left; 
+    }
 }
 
 @media (max-width: 768px) {
