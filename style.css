@@ -373,42 +373,56 @@ section {
 .timeline-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
+    align-items: center; /* Centre le logo verticalement par rapport au texte */
+    margin-bottom: 25px;
+    gap: 25px; /* Espacement fixe et propre entre le texte et le logo */
 }
-.timeline-item:nth-child(odd) .timeline-header {
-    flex-direction: row-reverse; /* Aligner logo à gauche pour les blocs impairs */
-}
-.company-logo {
-    width: 65px;
-    height: 65px;
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 8px;
-    object-fit: contain;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-.timeline-item:nth-child(odd) .company-logo { margin-right: 15px; }
-.timeline-item:nth-child(even) .company-logo { margin-left: 15px; }
 
+/* S'assure que le bloc de texte prend bien l'espace restant */
+.timeline-header > div {
+    flex: 1; 
+}
+
+.timeline-item:nth-child(odd) .timeline-header {
+    flex-direction: row-reverse; /* Aligne le logo à gauche pour les blocs impairs */
+    text-align: right; /* Aligne le texte correctement à droite */
+}
+
+.timeline-item:nth-child(even) .timeline-header {
+    text-align: left;
+}
+
+.company-logo {
+    width: 95px;  /* Logo beaucoup plus grand */
+    height: 95px;
+    background: #ffffff; /* Fond blanc maintenu pour la lisibilité des logos non transparents */
+    border-radius: 20px; /* Carré très arrondi, design tech moderne */
+    padding: 10px; /* Moins de marge interne pour que le logo soit plus visible */
+    object-fit: contain; /* Garde les proportions exactes et centre le logo */
+    flex-shrink: 0;
+    margin: 0 !important; /* Supprime les anciennes marges */
+    /* Ombre noire pour la profondeur + fine bordure lumineuse cyan */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 210, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation fluide avec effet rebond */
+}
+
+/* Effet très attractif au survol de la carte */
+.timeline-item:hover .company-logo {
+    transform: scale(1.1) rotate(5deg); /* Léger zoom et rotation */
+    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.2), 0 0 0 3px var(--primary); /* Bordure cyan qui s'illumine */
+}
+
+/* Ajustement de la date pour ce nouveau design */
 .timeline-date {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 6px 16px;
     background: rgba(0, 210, 255, 0.1);
     color: var(--primary);
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 15px;
-}
-.timeline-content h3 { font-size: 1.3rem; margin-bottom: 5px; }
-.timeline-content h4 { color: var(--text-muted); font-weight: 400; margin-bottom: 15px;}
-.timeline-content ul {
-    list-style-position: inside;
-    color: #9ca3af;
-    font-size: 0.95rem;
-    text-align: left;
+    border: 1px solid rgba(0, 210, 255, 0.2);
 }
 
 /* Projets Refonte (Images + Cartes Séparées) */
