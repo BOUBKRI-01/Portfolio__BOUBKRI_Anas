@@ -372,11 +372,18 @@ section {
 .company-logo, .formation-logo {
     width: 90px;
     height: 90px;
-    background: rgba(10, 15, 28, 0.6); /* Fond sombre transparent */
+    
+    /* Dégradé clair semi-transparent (Glassmorphism) pour faire ressortir les logos sombres */
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), rgba(220, 230, 245, 0.7));
+    backdrop-filter: blur(10px); /* Effet de verre flouté */
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    
     border-radius: 20px;
     padding: 12px;
     flex-shrink: 0;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 210, 255, 0.15);
+    
+    /* Ombre élégante et bordure blanche très fine pour l'effet "verre" */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.4);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -392,7 +399,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px !important; /* Maintient le logo centré dans la carte de formation */
+    margin: 0 auto 20px !important; 
 }
 .formation-logo img {
     width: 100%;
@@ -404,8 +411,9 @@ section {
 /* Animations Logos au survol */
 .timeline-item:hover .company-logo, .formation-card:hover .formation-logo {
     transform: scale(1.1) rotate(5deg);
-    background: rgba(10, 15, 28, 0.9);
-    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.2), 0 0 0 2px var(--primary);
+    /* Le dégradé s'illumine légèrement au passage de la souris */
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 1), rgba(240, 248, 255, 0.9));
+    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.3), inset 0 0 0 2px var(--primary);
 }
 /* -------------------------------------------------------- */
 
