@@ -370,19 +370,17 @@ section {
 
 /* --- DESIGN UNIFIÉ DES LOGOS (Entreprises & Écoles) --- */
 .company-logo, .formation-logo {
-    width: 90px;
-    height: 90px;
+    width: 110px; /* On agrandit la boîte (au lieu de 90px) */
+    height: 110px; /* On agrandit la boîte (au lieu de 90px) */
     
-    /* Dégradé clair semi-transparent (Glassmorphism) pour faire ressortir les logos sombres */
     background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), rgba(220, 230, 245, 0.7));
-    backdrop-filter: blur(10px); /* Effet de verre flouté */
-    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     
     border-radius: 20px;
-    padding: 12px;
+    padding: 4px; /* <-- LE SECRET EST ICI : on réduit drastiquement l'espace vide (au lieu de 12px) */
     flex-shrink: 0;
     
-    /* Ombre élégante et bordure blanche très fine pour l'effet "verre" */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.4);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
