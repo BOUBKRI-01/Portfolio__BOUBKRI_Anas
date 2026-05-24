@@ -537,10 +537,17 @@ footer {
     .timeline-item::after { left: 30px; }
     .timeline-item:nth-child(even):after { left: 30px; }
     
-    /* Réalignement du logo à gauche sur mobile pour toutes les cartes */
-    .timeline-item:nth-child(odd) .timeline-header { 
-        flex-direction: row; 
-        text-align: left; 
+    /* Réalignement du header timeline : logo + texte en colonne sur mobile */
+    .timeline-item:nth-child(odd) .timeline-header,
+    .timeline-item:nth-child(even) .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 15px;
+    }
+    .company-logo {
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -558,5 +565,7 @@ footer {
     .hero-content h1 { font-size: 2.5rem; }
     #accueil { padding-top: 90px; padding-bottom: 50px; }
     .profile-container, .profile-img { width: 260px; height: 260px; }
+    .timeline-content { padding: 20px 15px; }
+    .company-logo { width: 70px; height: 70px; }
     section { padding: 80px 5%; }
 }
