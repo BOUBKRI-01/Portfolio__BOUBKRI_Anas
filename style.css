@@ -521,6 +521,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+    /* Hero */
     #accueil {
         flex-direction: column-reverse;
         text-align: center;
@@ -531,23 +532,40 @@ footer {
         justify-content: flex-start;
     }
     .hero-buttons { justify-content: center; }
-    .timeline::after { left: 40px; }
-    .timeline-item { width: 100%; padding-left: 90px; padding-right: 20px; text-align: left; }
-    .timeline-item:nth-child(even), .timeline-item:nth-child(odd) { left: 0; }
-    .timeline-item::after { left: 30px; }
-    .timeline-item:nth-child(even):after { left: 30px; }
-    
-    /* Réalignement du header timeline : logo + texte en colonne sur mobile */
+
+    /* Timeline : axe vertical à gauche, tous les items à droite */
+    .timeline::after {
+        left: 16px;
+        right: auto;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 50px;
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item::after {
+        left: 6px !important;
+        right: auto !important;
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Header timeline : logo au-dessus du texte */
     .timeline-item:nth-child(odd) .timeline-header,
     .timeline-item:nth-child(even) .timeline-header {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        gap: 15px;
+        gap: 12px;
     }
+
+    /* Logo réduit et contraint */
     .company-logo {
-        width: 80px;
-        height: 80px;
+        width: 70px !important;
+        height: 70px !important;
+        flex-shrink: 0;
     }
 }
 
@@ -565,7 +583,8 @@ footer {
     .hero-content h1 { font-size: 2.5rem; }
     #accueil { padding-top: 90px; padding-bottom: 50px; }
     .profile-container, .profile-img { width: 260px; height: 260px; }
-    .timeline-content { padding: 20px 15px; }
-    .company-logo { width: 70px; height: 70px; }
+    .timeline-content { padding: 20px 15px; overflow: hidden; }
+    .timeline-content ul { padding-left: 5px; }
+    .company-logo { width: 60px !important; height: 60px !important; }
     section { padding: 80px 5%; }
 }
