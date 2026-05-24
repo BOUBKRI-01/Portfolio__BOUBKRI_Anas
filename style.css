@@ -521,7 +521,15 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    #accueil { flex-direction: column-reverse; text-align: center; padding-top: 120px; gap: 50px; }
+    #accueil {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: auto;
+        gap: 40px;
+        justify-content: flex-start;
+    }
     .hero-buttons { justify-content: center; }
     .timeline::after { left: 40px; }
     .timeline-item { width: 100%; padding-left: 90px; padding-right: 20px; text-align: left; }
@@ -548,6 +556,7 @@ footer {
     .nav-links li { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
     .menu-toggle { display: block; }
     .hero-content h1 { font-size: 2.5rem; }
-    .profile-container, .profile-img { width: 300px; height: 300px; }
+    #accueil { padding-top: 90px; padding-bottom: 50px; }
+    .profile-container, .profile-img { width: 260px; height: 260px; }
     section { padding: 80px 5%; }
 }
