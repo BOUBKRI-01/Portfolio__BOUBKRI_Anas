@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas BOUBKRI | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">AB.</div>
+        <ul class="nav-links">
+            <li><a href="#accueil" class="active" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="#a-propos" data-i18n="nav.about">À propos</a></li>
+            <li><a href="#formations" data-i18n="nav.education">Formations</a></li>
+            <li><a href="#competences" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="lang-switch" role="group" aria-label="Langue / Language">
+                <button type="button" class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+                <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <header id="accueil">
+        <div class="hero-content reveal-left">
+            <h1 data-i18n="hero.title">Bonjour, je suis <span class="highlight">Anas Boubkri</span></h1>
+            <h2 data-i18n="hero.subtitle">Ingénieur Automobile & Solutions digitales</h2>
+            <p data-i18n="hero.text">Étudiant en 3ème année du cycle ingénieur à l'ENSA Berrechid, passionné par les technologies embarquées et les environnements industriels.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.contact">Me contacter</a>
+                <a href="CV_BOUBKRI_Anas.pdf" download="CV_PFE_Anas_BOUBKRI.pdf" class="btn btn-secondary" id="cv-link">
+                    <i class="fas fa-download"></i> <span data-i18n="hero.cv">Télécharger CV</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image reveal-right">
+            <div class="profile-container">
+                <div class="animated-border"></div>
+                <img src="profile.jpg" alt="Anas Boubkri" class="profile-img">
+            </div>
+        </div>
+    </header>
+
+    <section id="a-propos" class="reveal-up">
+        <h2 class="section-title" data-i18n="about.title">À propos de moi</h2>
+        <div class="about-container">
+            <p data-i18n="about.text">Je recherche activement un stage PFE pour développer mes compétences techniques et analytiques. Fort d'un parcours académique solide en systèmes embarqués et d'une passion pour le secteur automobile, j'allie conception 3D, programmation et méthodes d'amélioration continue pour apporter des solutions concrètes aux défis industriels.</p>
+        </div>
+    </section>
+
+    <section id="formations" class="reveal-up">
+        <h2 class="section-title" data-i18n="edu.title">Formations Académiques</h2>
+        <div class="formations-grid">
+            <div class="formation-card">
+                <div class="formation-logo">
+                    <img src="logo-ensa.png" alt="Logo ENSA">
+                </div>
+                <span class="formation-date">2024 - 2027</span>
+                <h3 data-i18n="edu.1.degree">Cycle d'ingénieur</h3>
+                <h4 data-i18n="edu.1.field">Automobile et solutions digitales</h4>
+                <p data-i18n="edu.1.school">École Nationale des Sciences Appliquées ENSA - Berrechid</p>
+            </div>
+            <div class="formation-card">
+                <div class="formation-logo">
+                    <img src="logo-est.png" alt="Logo EST">
+                </div>
+                <span class="formation-date">2023 - 2024</span>
+                <h3 data-i18n="edu.2.degree">Licence professionnelle</h3>
+                <h4 data-i18n="edu.2.field">Électrotechnique, Instrumentation et supervision des systèmes Intelligents</h4>
+                <p data-i18n="edu.2.school">École Supérieure de Technologies EST - Kénitra</p>
+            </div>
+            <div class="formation-card">
+                <div class="formation-logo">
+                    <img src="logo-est.png" alt="Logo EST">
+                </div>
+                <span class="formation-date">2021 - 2023</span>
+                <h3 data-i18n="edu.3.degree">Diplôme Universitaire de Technologies (DUT)</h3>
+                <h4 data-i18n="edu.3.field">Électronique embarquée pour l'automobile</h4>
+                <p data-i18n="edu.3.school">École Supérieure de Technologies EST - Kénitra</p>
+            </div>
+            <div class="formation-card">
+                <div class="formation-logo">
+                    <img src="logo-lycee.png" alt="Logo Lycée">
+                </div>
+                <span class="formation-date">2020 - 2021</span>
+                <h3 data-i18n="edu.4.degree">Baccalauréat</h3>
+                <h4 data-i18n="edu.4.field">Sciences physiques</h4>
+                <p data-i18n="edu.4.school">Lycée ABDELLAH ALAROUI - Mohammedia</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="reveal-up">
+        <h2 class="section-title" data-i18n="skills.title">Mes Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-project-diagram"></i>
+                <h3 data-i18n="skills.1.title">Ingénierie des systèmes</h3>
+                <p data-i18n="skills.1.text">Architecture AUTOSAR, Modélisation SysML/UML, MATLAB/Simulink, LabVIEW.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-microchip"></i>
+                <h3 data-i18n="skills.2.title">Systèmes embarqués</h3>
+                <p data-i18n="skills.2.text">ESP32, STM32, Raspberry PI, FPGA, Langage C, Python, VHDL.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-cogs"></i>
+                <h3 data-i18n="skills.3.title">Automatisation</h3>
+                <p data-i18n="skills.3.text">TIA PORTAL, Grafcet, Ladder, IHM, SCADA.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3 data-i18n="skills.4.title">Conception & CAO</h3>
+                <p data-i18n="skills.4.text">Proteus, KiCad, EasyEDA, AutoCAD, DraftSight, CATIA V5, Solidworks.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h3 data-i18n="skills.5.title">Data Analysis</h3>
+                <p data-i18n="skills.5.text">Minitab, Excel, Power BI.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-users"></i>
+                <h3 data-i18n="skills.6.title">Soft Skills</h3>
+                <p data-i18n="skills.6.text">Formateur technique (Udemy, YouTube), Créateur de contenu en automobile (Instagram, TikTok).</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-sync-alt"></i>
+                <h3 data-i18n="skills.7.title">Lean Management</h3>
+                <p data-i18n="skills.7.text">5S, VSM, Kaizen, PDCA, Poka-Yoke, Management visuel, WIP, Takt Time, amélioration continue.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="reveal-up">
+        <h2 class="section-title" data-i18n="exp.title">Parcours Professionnel</h2>
+        <div class="timeline">
+            <div class="timeline-item reveal-left">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date" data-i18n="exp.1.date">Septembre 2026 - Présent</span>
+                            <h3 data-i18n="exp.1.role">Alternant Design Release Engineer (DRE)</h3>
+                            <h4 data-i18n="exp.segula">SEGULA Technologies Casablanca</h4>
+                        </div>
+                        <img src="logo-segula.png" alt="Logo Segula Technologies" class="company-logo">
+                    </div>
+                    <ul>
+                        <li data-i18n="exp.1.li1">Analyse et gestion de composants mécatroniques automobiles dans le cadre du parcours DRE / Component Owner – Serial Life.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal-right">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date" data-i18n="exp.2.date">Juillet 2026 - Août 2026</span>
+                            <h3 data-i18n="exp.2.role">Stagiaire PFA : Développement & Validation</h3>
+                            <h4 data-i18n="exp.segula">SEGULA Technologies Casablanca</h4>
+                        </div>
+                        <img src="logo-segula.png" alt="Logo Segula Technologies" class="company-logo">
+                    </div>
+                    <ul>
+                        <li data-i18n="exp.2.li1">Développement d’un ECU multimodulaire : Conception schématique, routage PCB, validation DRC, et intégration mécanique 3D sous CATIA V5.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal-left">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date" data-i18n="exp.3.date">Juillet 2025 - Août 2025</span>
+                            <h3 data-i18n="exp.3.role">Stagiaire en Manufacturing Engineering</h3>
+                            <h4 data-i18n="exp.3.company">NOVARES Kénitra</h4>
+                        </div>
+                        <img src="logo-novares.png" alt="Logo Novares" class="company-logo">
+                    </div>
+                    <ul>
+                        <li data-i18n="exp.3.li1">Optimisation du Layout d'usine : conception 2D, propositions d'améliorations.</li>
+                        <li data-i18n="exp.3.li2">Élaboration des fiches d'instructions (amélioration continue).</li>
+                        <li data-i18n="exp.3.li3">Conception 3D d'une machine de découpe d'enjoliveurs sur CATIA V5.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal-right">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date" data-i18n="exp.4.date">Avril 2024 - Juin 2024</span>
+                            <h3 data-i18n="exp.4.role">Stagiaire PFE (Laboratoire d'Automatique)</h3>
+                            <h4 data-i18n="exp.4.company">EST Kénitra</h4>
+                        </div>
+                        <img src="logo-est.png" alt="Logo EST Kénitra" class="company-logo">
+                    </div>
+                    <ul>
+                        <li data-i18n="exp.4.li1">Conception et réalisation d'un système SCADA pour la gestion d'énergie électrique fournit par des centrales de mesures.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal-left">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date" data-i18n="exp.5.date">Avril 2023 - Mai 2023</span>
+                            <h3 data-i18n="exp.5.role">Stagiaire au Technicentre de Maintenance</h3>
+                            <h4 data-i18n="exp.5.company">ONCF Kénitra</h4>
+                        </div>
+                        <img src="logo-oncf.png" alt="Logo ONCF" class="company-logo">
+                    </div>
+                    <ul>
+                        <li data-i18n="exp.5.li1">Conception et réalisation d'un système embarqué pour le verrouillage automatique de porte du magasin d'outillages.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal-right">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date" data-i18n="exp.6.date">Juin 2022 - Juillet 2022</span>
+                            <h3 data-i18n="exp.6.role">Stagiaire en Maintenance</h3>
+                            <h4 data-i18n="exp.6.company">UNIVERS EMBALLAGES, Kénitra</h4>
+                        </div>
+                        <img src="logo-univers.png" alt="Logo Univers Emballages" class="company-logo">
+                    </div>
+                    <ul>
+                        <li data-i18n="exp.6.li1">Maintenance préventive et corrective des moteurs électriques dédiés au bobinage des fils.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="reveal-up">
+        <h2 class="section-title" data-i18n="proj.title">Projets Académiques</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="projet1.jpg" alt="Détection d'obstacles" data-i18n-alt="proj.1.alt">
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj.1.title">Détection d'obstacles IA</h3>
+                    <p data-i18n="proj.1.text">Développement d'un système automobile de détection multi-classe d'obstacles en utilisant l'intelligence artificielle.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="projet2.jpg" alt="Chatbot IA" data-i18n-alt="proj.2.alt">
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj.2.title">Chatbot d'Assistance</h3>
+                    <p data-i18n="proj.2.text">Développement d'un Chatbot IA intelligent conçu spécifiquement pour l'assistance du conducteur en temps réel.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="projet3.jpg" alt="Système BMS" data-i18n-alt="proj.3.alt">
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj.3.title">Conception d'un BMS</h3>
+                    <p data-i18n="proj.3.text">Conception et réalisation matérielle et logicielle d'un Battery Management System (BMS) pour véhicules électriques.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="projet4.jpg" alt="Moteur PMSM" data-i18n-alt="proj.4.alt">
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj.4.title">Commande Moteur PMSM</h3>
+                    <p data-i18n="proj.4.text">Implémentation d'une commande avancée pour un moteur PMSM de traction, simulée et validée sous MATLAB/Simulink.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="projet5.jpg" alt="Moteur V4 3D" data-i18n-alt="proj.5.alt">
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj.5.title">Conception 3D : Moteur 4 cylindres</h3>
+                    <p data-i18n="proj.5.text">Conception 3D détaillée et assemblage d'un moteur à quatre cylindres en utilisant le logiciel industriel CATIA V5.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="projet6.jpg" alt="Régulateur ACC" data-i18n-alt="proj.6.alt">
+                </div>
+                <div class="project-content">
+                    <h3 data-i18n="proj.6.title">Régulateur Adaptatif ACC</h3>
+                    <p data-i18n="proj.6.text">Réalisation et paramétrage d'un régulateur de vitesse adaptatif (ACC) pour optimiser la sécurité et la conduite autonome.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="reveal-up">
+        <h2 class="section-title" data-i18n="contact.title">Contactez-moi</h2>
+        <div class="contact-container">
+            <p data-i18n="contact.text">Je suis à la recherche d'un stage PFE. N'hésitez pas à me contacter via mes réseaux ou par email :</p>
+            <div class="social-links">
+                <a href="mailto:boubkrianas7@gmail.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/anas-boubkri/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/BOUBKRI-01" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="tel:+212638647298" class="social-icon" title="Téléphone" data-i18n-title="contact.phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer.text">&copy; 2026 Anas Boubkri. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
