@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Hero
         "hero.title": 'Hello, I\'m <span class="highlight">Anas Boubkri</span>',
-        "hero.subtitle": "Automotive & Digital Solutions Engineer",
+        "hero.subtitle": "Work-Study Engineer at SEGULA Technologies | Automotive Engineer | Mechatronics & Embedded Systems",
         "hero.text": "Third-year engineering student at ENSA Berrechid, passionate about embedded technologies and industrial environments.",
         "hero.contact": "Contact me",
         "hero.cv": "Download CV",
